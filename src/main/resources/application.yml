@@ -1,0 +1,67 @@
+spring:
+  profiles:
+    active: prod
+#  redis:
+#    host: localhost
+#    port: 6379
+  data:
+    redis:
+      url: redis://default:DcnJN8N71J3cQlEDWiIgadafLnBEQOgm@horses-birth-serene-55051.db.redis.io:11167
+#
+#  kafka:
+#    bootstrap-servers: pkc-921jm.us-east-2.aws.confluent.cloud:9092
+#
+#    producer:
+#      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+#      value-serializer: org.springframework.kafka.support.serializer.JacksonJsonSerializer
+#
+#    consumer:
+#      group-id: sentiments-group
+#      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+#      value-deserializer: org.springframework.kafka.support.serializer.JacksonJsonDeserializer
+#
+#      properties:
+#        spring.json.trusted.packages: com.prakhar.ETEjournal.model
+#
+#    properties:
+#      security.protocol: SASL_SSL
+#      sasl.mechanism: PLAIN
+#      sasl.jaas.config: org.apache.kafka.common.security.plain.PlainLoginModule required username='ZMLMFDT5MPLT6FZQ' password='cfltG8Eve0S/+0RY1MEQHx4CtYMsGT2PhX8PyVqm8+LGf7tQOudLm6k2eJkxYQww';
+#      session.timeout.ms: 45000
+
+  kafka:
+    bootstrap-servers: 40.82.146.203:9092
+
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JacksonJsonSerializer
+
+    consumer:
+      group-id: sentiments-group
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JacksonJsonDeserializer
+
+      properties:
+        spring.json.trusted.packages: com.prakhar.ETEjournal.model
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: ayush9935558716@gmail.com
+    password: pzfh pprb jcmg csng
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+# starttls:- start transport layer security
+
+weather:
+  api:
+    key: "47cf122309b67cd4dd68a657acc43ae4"
+
+#Both are correct
+#weather.api.key: "47cf122309b67cd4dd68a657acc43ae4"

@@ -1,0 +1,34 @@
+spring:
+  mongodb:
+    uri : mongodb+srv://prakharshahi9935_db_user:3EHrNfkqH5igW0Rk@cluster0.40nmpfs.mongodb.net/journalDB?appName=Cluster0
+    auto-index-creation : true
+
+server:
+  port: 8080
+#  servlet:
+#    context-path: "/journal"
+
+
+#logging:
+#  level:
+#    com:
+#      prakhar:
+#        ETEjournal: trace
+
+# specified package k liye logging ko specify kiya h
+# agar trace likha hu to usse severe saare chalenge
+# agar debug then usse severe saare chalenge
+
+
+#logging:
+#  level:
+#    root: info
+
+
+#logging:
+#  level:
+#    com:
+#      prakhar:
+#        ETEjournal:
+#          Service:
+#            UserService: off
